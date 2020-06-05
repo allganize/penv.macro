@@ -14,9 +14,13 @@ function envVariableMacro({references, babel: {types: t}, config}) {
     const matchedPropertyPath = argumentPath
       .get('properties')
       .find(propertyPath => {
-        const keyName = propertyPath.get('key').node.name
+        const keyNode = propertyPath.get('key').node
 
-        return keyName === targetEnv
+        if (keyNode.type === 'StringLiteral') {
+          return keyNode.value === targetEnv
+        }
+
+        return keyNode.name === targetEnv
       })
 
     const matchedValueNode = matchedPropertyPath

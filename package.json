@@ -1,5 +1,5 @@
 {
-  "name": "penv.macro",
+  "name": "@allganize/penv.macro",
   "version": "0.4.0",
   "main": "macro.js",
   "author": "Jianhua Cheng <jianhua.cheng@liulishuo.com>",
@@ -9,7 +9,7 @@
   },
   "repository": {
     "type": "git",
-    "url": "https://github.com/chengjianhua/penv.macro.git"
+    "url": "https://github.com/allganize/penv.macro.git"
   },
   "peerDependencies": {
     "babel-plugin-macros": "^2.2.0"
